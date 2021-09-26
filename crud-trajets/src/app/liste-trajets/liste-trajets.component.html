@@ -1,0 +1,33 @@
+
+<div class="container mt-3">
+  <h2>Liste des employées</h2>
+  <a  routerLink="/trajet/ajouter" class="btn btn-primary">Publier un trajet</a>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Nom</th>
+        <th scope="col">Email</th>
+        <th scope="col">Téléphone</th>
+        <th scope="col">D'où Partez-Vous?</th>
+        <th scope="col">Où allez-vous?</th>
+        <th scope="col">Prix (€)</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let t of allTrajects">
+        <td>{{t.id}}</td>
+        <td>{{t.nom}} </td>
+        <td> {{t.email}}</td>
+        <td>{{t.phone}} </td>
+        <td>{{t.depart}} </td>
+        <td>{{t.destination}}</td>
+        <td>{{t.prix}} </td>
+        <td><a><button class="btn btn-warning" routerLink="/trajet/edit/{{t.id}}" >Modifier</button></a> </td>
+        <td><button class="btn btn-danger" (click)="removeTraject(t.id)">Supprimer </button></td>
+  
+    </tbody>
+  </table>
+  </div>

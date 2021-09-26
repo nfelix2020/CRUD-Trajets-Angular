@@ -1,0 +1,39 @@
+<div class="container mt-5">
+  <h2> Editer un trajet </h2>
+
+  <form (ngSubmit)="onSubmit(f)" #f="ngForm" *ngIf="traj">
+    <!-- <div class="form-group" >
+      <label for="">Id</label>
+      <input type="text" id="id" class="form-control"  name="id" [(ngModel)]="traj.id">
+    </div> -->
+    <div class="form-group">
+      <label for="">Nom</label>
+      <input type="text" id="nom" class="form-control"  name="nom" [(ngModel)]="traj.nom" >
+    </div>
+    <div class="form-group">
+      <label for="">Email</label>
+      <input type="text" class="form-control"  name="email" [(ngModel)]="traj.email">
+    </div>
+    <div class="form-group">
+      <label for="">Téléphone</label>
+      <input type="text" class="form-control"  name="phone" [(ngModel)]="traj.phone">
+    </div>
+    <div class="form-group">
+      <label for="">D'où Partez-Vous?</label>
+      <input type="text" class="form-control"  name="depart" [(ngModel)]="traj.depart">
+    </div>
+    <div class="form-group">
+      <label for="">Où allez-vous?</label>
+      <input type="text" class="form-control"  name="destination" [(ngModel)]="traj.destination">
+    </div>
+    <div class="form-group">
+      <label for="">Prix (€)</label>
+      <input type="text" class="form-control"  name="prix" [(ngModel)]="traj.prix">
+    </div>
+    <div class="form-group">
+     <button class="btn btn-primary" type="submit" >Modifier</button>
+    </div>
+  </form>
+</div>
+
+
