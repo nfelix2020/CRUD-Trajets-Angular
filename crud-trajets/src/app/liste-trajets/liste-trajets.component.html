@@ -1,7 +1,9 @@
 
 <div class="container mt-3">
-  <h2>Liste des employées</h2>
-  <a  routerLink="/trajet/ajouter" class="btn btn-primary">Publier un trajet</a>
+  <h2 >
+    Liste des employées</h2>
+    <a></a>
+  <a  routerLink="/trajet/ajouter" class="btn btn-primary add-traject"> <i class="fas fa-plus"></i>Publier un trajet</a>
 
   <table class="table">
     <thead>
@@ -27,7 +29,7 @@
         <td>{{t.prix}} </td>
         <td><a><button class="btn btn-warning" routerLink="/trajet/edit/{{t.id}}" >Modifier</button></a> </td>
         <td><button class="btn btn-danger" (click)="removeTraject(t.id)">Supprimer </button></td>
-  
+
     </tbody>
   </table>
   </div>
